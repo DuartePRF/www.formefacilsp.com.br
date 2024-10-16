@@ -1281,6 +1281,32 @@ Blog
 }
 
 
+
+/* 
+---------------------------------------------
+cursos btn
+--------------------------------------------- 
+*/
+
+
+
+.cursos-btn {
+  box-shadow: 5px 5px 5px rgb(214, 214, 214);
+  border-radius: 5px;
+  padding: 25px 5px 25px 5px;
+  background-color:#ffffff;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 15px;
+  text-align: center;
+} 
+
+.cursos-btn:hover {
+  background-color:#f6f6f6;
+}
+
+
 /* 
 ---------------------------------------------
 contact
@@ -1298,11 +1324,11 @@ contact
 .contact-us .section-heading h2,
 .contact-us .section-heading h2 em,
 .contact-us .section-heading h2 span {
-  color: #fff;
+  color: #336699;
 }
 
 .contact-us .section-heading p {
-  color: #fff;
+  color: #336699;
   margin-top: 30px;
 }
 
@@ -1313,7 +1339,7 @@ contact
 .phone-info h4 {
   font-size: 20px;
   font-weight: 700;
-  color: #fff;
+  color: #000000;
 }
 
 .phone-info h4 span i {
@@ -1331,7 +1357,7 @@ contact
 }
 
 .phone-info h4 span a {
-  color: #fff;
+  color: #000000;
   font-size: 15px;
   font-weight: 400;
 }

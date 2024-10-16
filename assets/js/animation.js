@@ -191,3 +191,41 @@ wow = new WOW(
   }
 );
 wow.init();
+
+
+
+
+document.querySelector(".main-blue-button").addEventListener("click", function() {
+	const hiddenElements = document.querySelectorAll(".unhidden");
+	
+	hiddenElements.forEach(function(element, index) {
+	  // Verifica se o elemento está visível ou oculto
+	  if (element.hidden) {
+		// Mostrar o elemento
+		element.hidden = false;
+		element.style.display = "block";
+		element.style.opacity = "0";
+		element.style.transition = "opacity 0.5s ease";
+		
+		// Suaviza a aparição dos elementos com um delay
+		setTimeout(function() {
+		  element.style.opacity = "1";
+		}, index * 300);
+		
+		// Rola suavemente até o elemento
+		element.scrollIntoView({ behavior: "smooth", block: "start" });
+	  } else {
+		// Esconder o elemento com uma transição suave
+		element.style.opacity = "0";
+		
+		// Depois de ocultar, remover o display após a transição
+		setTimeout(function() {
+		  element.style.display = "none";
+		  element.hidden = true;
+		}, 500); // Tempo de transição correspondente ao tempo do fade-out
+	  }
+	});
+	
+	// Alternar o texto do botão entre "Mostrar Conteúdo" e "Esconder Conteúdo"
+	const button = document.querySelector(".main-blue-button");
+  });
